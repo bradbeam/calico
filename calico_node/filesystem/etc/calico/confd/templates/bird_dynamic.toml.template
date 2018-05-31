@@ -1,0 +1,8 @@
+[template]
+src = "bird_dynamic.cfg.template"
+dest = "/etc/calico/confd/config/bird_dynamic.cfg"
+prefix = "/calico"
+keys = [
+    "/v1/ipam/v4/pool"
+]
+reload_cmd = "pkill -HUP bird || true"
